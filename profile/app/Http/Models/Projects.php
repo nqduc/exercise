@@ -10,7 +10,7 @@ class Projects extends Model
         'name', 'description', 'start_time', 'finishe_time', 'project_status_id', 'customer_id', 'leader_id',
     ];
 
-    public function customers()
+    public function customer()
     {
         return $this->belongsTo(Customers::class);
     }
@@ -25,7 +25,7 @@ class Projects extends Model
         return $this->hasMany(Tasks::class);
     }
 
-    public function projectstatus()
+    public function projectStatus()
     {
         return $this->belongsTo(ProjectStatus::class);
     }

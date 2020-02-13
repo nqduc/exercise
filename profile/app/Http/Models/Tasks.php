@@ -12,7 +12,7 @@ class Tasks extends Model
 
     public function member()
     {
-        return $this->belongsTo(Customers::class);
+        return $this->belongsTo(Members::class);
     }
 
     public function project()
@@ -20,7 +20,7 @@ class Tasks extends Model
         return $this->belongsTo(Projects::class);
     }
 
-    public function taskStatuses()
+    public function taskStatus()
     {
         return $this->belongsTo(TaskStatus::class);
     }
