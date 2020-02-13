@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Project_status extends Model
+class ProjectStatus extends Model
 {
     protected $fillable = [
         'name'
@@ -12,6 +12,6 @@ class Project_status extends Model
 
     public function projects()
     {
-        return $this->hasMany('project::class');
+        return $this->hasMany(Projects::class);
     }
 }

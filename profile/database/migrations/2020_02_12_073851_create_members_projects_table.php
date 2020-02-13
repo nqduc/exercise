@@ -13,7 +13,7 @@ class CreateMembersProjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('members_projects', function (Blueprint $table) {
+        Schema::create('member_project', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('member_id');
             $table->integer('project_id');
@@ -30,6 +30,6 @@ class CreateMembersProjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('members_projects');
+        Schema::dropIfExists('member_project');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,14 +11,12 @@ class Members extends Model
     ];
 
     public function tasks()
-
     {
-        return $this->hasMany('Task::class');
+        return $this->hasMany(Tasks::class);
     }
 
     public function project()
-
     {
-        return $this->belongsToMany('Project::class', 'member_project');
+        return $this->belongsToMany(Projects::class, 'member_project');
     }
 }

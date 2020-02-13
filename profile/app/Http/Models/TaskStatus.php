@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Task_status extends Model
+class TaskStatus extends Model
 {
     protected $fillable = [
         'name'

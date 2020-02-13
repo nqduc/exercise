@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,6 +12,6 @@ class Customers extends Model
 
     public function projects()
     {
-        return $this->hasMany('Projects::class');
+        return $this->hasMany(Projects::class);
     }
 }
