@@ -3,11 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Members extends Model
+class Members extends Authenticatable
 {
     protected $fillable = [
-        'name', 'emaill', 'password', 'phone', 'address','image',
+        'name', 'email', 'password', 'phone', 'address','image',
     ];
 
     public function tasks()
@@ -19,4 +20,8 @@ class Members extends Model
     {
         return $this->belongsToMany(Projects::class, 'member_project');
     }
+
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
 }
